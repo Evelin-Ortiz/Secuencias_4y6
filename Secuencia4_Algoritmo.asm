@@ -64,7 +64,7 @@ PASAUNBIT
     CLRF DATOS3
     MOVFW DATOS0
     IORWF DATOS3,1 ;Le hace or con el DATO3
-    RRF DATOS1 ;Mueve a la izq el bit que comienza en 3
+    RRF DATOS1 ;Mueve a la der el bit que comienza en 3
     MOVFW DATOS1
     IORWF DATOS3,1 ;Le hace or con el DATO3
     RLF DATOS2;Mueve a la izq el bit que comienza en 7
