@@ -58,19 +58,19 @@ ARRANQUE
     
 PASAUNBIT
     
-    RRF DATOS0 ;Mueve a la izq el bit que comienza en 1
-    BTFSC DATOS0,0; Si el bit 0 de Datos0 Salta la siguiente linea, si es 1 la cumple
+    RRF DATOS0 
+    BTFSC DATOS0,0
     goto PASOFINAL
     CLRF DATOS3
     MOVFW DATOS0
-    IORWF DATOS3,1 ;Le hace or con el DATO3
-    RRF DATOS1 ;Mueve a la der el bit que comienza en 3
+    IORWF DATOS3,1 
+    RRF DATOS1 
     MOVFW DATOS1
-    IORWF DATOS3,1 ;Le hace or con el DATO3
-    RLF DATOS2;Mueve a la izq el bit que comienza en 7
+    IORWF DATOS3,1 
+    RLF DATOS2
     BCF DATOS2,0
     MOVFW DATOS2
-    IORWF DATOS3,0 ;Le hace or con el DATO3
+    IORWF DATOS3,0 
     MOVWF DATOS3
     MOVWF PORTB
     CALL RETARDO
